@@ -1,0 +1,22 @@
+
+<table>
+   <tr>
+     <td align="center">
+		<input type="text" value="" id="number">
+        <input type="button" value="Chat" id="MyButton" >
+     </td>
+   </tr>
+</table>
+
+<script>
+document.getElementById("MyButton").onclick = function () { 
+
+	let val=document.getElementById("number").value.trim();
+	if(val.length==10){
+		val="+91"+val;
+	}
+	let url="https://api.whatsapp.com/send?phone="+val;
+	window.open(url);
+
+};
+</script>
