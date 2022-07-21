@@ -1,14 +1,92 @@
 
-<table>
-   <tr>
-     <td align="center">
-		<input type="text" value="" id="number">
-        <input type="button" value="Chat" id="MyButton" >
-     </td>
-   </tr>
-</table>
+<!DOCTYPE html>
+<html>
 
-<script>
+	<head>
+		<!-- Place this data between the <head> tags of your website -->
+		<title>Open Whatsapp chatbox without Saving number to Phonebook</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Open whatsapp chatbox for any number without saving contact in phonebook." />
+		<!-- Twitter Card data -->
+		<!-- <meta name="twitter:card" content="Open whatsapp chatbox for any number without saving contact in phonebook."> -->
+		<meta name="twitter:title" content="Open Whatsapp chatbox without Saving number to Phonebook">
+		<meta name="twitter:image" content="./assets/images/screenshot.png">
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Open Whatsapp chatbox without Saving number to Phonebook" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="./assets/images/screenshot.png" />
+		<meta property="og:description" content="Open whatsapp chatbox for any number without saving contact in phonebook. You can initiate chat with your own number for a message or photo or quick note or biz card or forward a titbit from another conversation so it is saved like a personal bookmark or scrapbook!" />
+		<meta property="og:site_name" content="Open Whatsapp chatbox without Saving number" />
+		<script src="./assets/js/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46142311-3"></script>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-46142311-3');
+		</script>
+		<link rel="stylesheet" href="./assets/css/style.css">
+	</head>
+	<body style="text-align: center" class="text-center">
+		<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #428982; height:50px">
+			<a class="navbar-brand" href="#">
+				<span style="margin-left: 10px;">Whatsapp chat</span>
+			</a>
+
+		</nav>
+		<div class="container">
+			<h1>Open whatsapp chatbox</h1>
+			<h3>for any number without saving contact in phonebook</h3>
+			<div class="form-group text-center center-block col-*offset-* justify-content-center">
+				<form method="GET" id="formID" action="https://api.whatsapp.com/send">
+					<br>
+					<br>
+					<br>Enter number without country code
+					<br>
+					<br>
+					<div class="row">
+						<div class="form-group col-md-4 col-sm-4 justify-content-center texxt-center" style="margin: 0 auto;">
+							<div>
+								<div class="input-group-prepend">
+									<div class="input-group-text">+</div>
+									<input type="number" name="phone" id="number" placeholder="Eg: 9999988888" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<p style="font-size: 0.8em">Eg: 9999988888</p>
+					</div>
+					<div class="form-group col-md-4 col-sm-4 justify-content-center text-center" style="margin: 0 auto;">
+						<div id="loader" style="display: none;">
+							<img src="./assets/images/1.gif" style="width: 40%; margin-left: auto; margin-right: auto;">
+						</div>
+						<input value="submit" id="MyButton" class="btn btn-primary">
+					</div>
+
+
+				</form>
+			</div>
+			<br>
+			<br>
+
+			<!-- FOOTER -->
+			<hr class="featurette-divider">
+			<footer class="">
+				<p>Made with
+					<span>❤</span>
+				</p>
+
+			</footer>
+		</div>
+	</body>
+	<script type="text/javascript">
+
+	</script>
+	<script>
 document.getElementById("MyButton").onclick = function () { 
 
 	let val=document.getElementById("number").value.trim();
@@ -16,7 +94,9 @@ document.getElementById("MyButton").onclick = function () {
 		val='91'+val;
 	}
 	let url="https://api.whatsapp.com/send?phone="+val;
-	window.open(url);
+	window.open(url,'_blank');
 
 };
-</script>
+	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</html>
